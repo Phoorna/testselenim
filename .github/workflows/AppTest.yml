@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Build My App Test Suite
+      - name: Build test suite
         run: mvn --batch-mode --update-snapshots verify
           echo "Running test suite"
           sleep 10s
