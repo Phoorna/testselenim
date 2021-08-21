@@ -25,4 +25,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build test suite
-        run: mvn build
+        run: mvn clean test
