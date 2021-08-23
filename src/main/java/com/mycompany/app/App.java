@@ -17,7 +17,8 @@ public class App {
 	public static void main(String[] args) {
 		try {
 			System.out.println("<<<<Test Starts>>>>");
-			WebDriverManager.chromedriver().arch32().setup();
+			//WebDriverManager.chromedriver().arch32().setup();
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\qaautomated\\git\\drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			System.out.println("Launching Web Page");
