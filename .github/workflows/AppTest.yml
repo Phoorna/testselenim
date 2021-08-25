@@ -11,10 +11,6 @@ on:
   
   workflow_dispatch:
   
-env:
-     SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
-     SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}} 
-     TUNNEL_ID: ${{secrets.TUNNEL_ID}}
    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,3 +33,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build test suite
         run: mvn clean test
+    env:
+     SAUCE_USERNAME: ${{secrets.SAUCE_USERNAME}}
+     SAUCE_ACCESS_KEY: ${{secrets.SAUCE_ACCESS_KEY}} 
