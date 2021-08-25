@@ -24,12 +24,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class App {
 	private static WebDriver driver;
-	public static String Sauce_Username = System.getenv("Sauce_Username");
-	public static String Sauce_Password = System.getenv("Sauce_Password");
-	public static String Sauce_Accesskey = System.getenv("Accesskey");
+	public static String Sauce_Username = "pravichandran"/*System.getenv("Sauce_Username")*/;
+	//public static String Sauce_Password = System.getenv("Sauce_Password");
+	//public static String Sauce_Accesskey = System.getenv("Accesskey");
 	public static String Sauce_Tunnel = "Purposefinancial_tunnel"/*System.getenv("Tunnel")*/;
-	public static String Sauce_url = "https://" + Sauce_Username + ":" + Sauce_Accesskey
-			+ "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
+	public static String Sauce_url = https://pravichandran:69b35c27-384f-40f9-84a8-401e9db2b3b0@ondemand.us-west-1.saucelabs.com:443/wd/hub;
 	public static DesiredCapabilities cap = new DesiredCapabilities();
 	public static MutableCapabilities sauceoptions = new MutableCapabilities();
 	public static MutableCapabilities capabilities = new MutableCapabilities();
