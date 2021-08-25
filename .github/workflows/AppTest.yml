@@ -29,9 +29,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
-      
-      - name: Saucectl RUN Docker and Cloud
-        uses: saucelabs/saucectl-run-action@v1
+        with:
+                username: ${{ secrets.SAUCE_USERNAME }}
+                accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+                tunnelIdentifier: ${{secrets.TUNNEL_ID}}
         
       # Runs a single command using the runners shell
       - name: Build test suite
