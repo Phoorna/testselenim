@@ -25,9 +25,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
-       
-        
-      # Runs a single command using the runners shell
+        with:
+           username: ${{ secrets.SAUCE_USERNAME }}
+           accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+           tunnelIdentifier: ${{secrets.TUNNEL_ID}}
+           data center: us-west-1
+               
+               # Runs a single command using the runners shell
       - name: Build test suite
         run: mvn clean test
   
